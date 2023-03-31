@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "code-snippet": "apps/code-snippet",
+    "code-snippet-e2e": "apps/code-snippet-e2e"
+  }
+}
