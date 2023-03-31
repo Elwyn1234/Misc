@@ -1,0 +1,18 @@
+{
+  "name": "genifof",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@devtools/usr-manager": "^1.0.211",
+    "@devtools/usr-manager-load-fs": "^1.0.211",
+    "fs-extra": "^10.0.0",
+    "js-yaml": "^4.1.0",
+    "tslib": "^2.4.0"
+  }
+}

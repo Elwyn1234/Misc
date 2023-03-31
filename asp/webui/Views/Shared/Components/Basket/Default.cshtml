@@ -1,0 +1,11 @@
+@model Shop.WebUI.Models.BasketModel
+
+@if (Model.BasketItems != null) {
+    <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link text-dark" asp-area="" asp-controller="Basket" asp-action="Index">@Model.BasketItems.Sum(item => item.Quantity) items || @String.Format("{0:c}", Model.GrandTotal)</a></li>
+    </ul>
+} else {
+    <ul class="nav navbar-nav navbar-right">
+        <li><a class="nav-link text-dark" asp-area="" asp-controller="Basket" asp-action="Index">0 items || £0.00</a></li>
+    </ul>
+}

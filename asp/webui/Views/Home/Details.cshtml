@@ -1,0 +1,43 @@
+@model Shop.WebUI.Models.Product
+@{
+    ViewBag.Title = Model.Name + " Details";
+}
+
+<h2>@Html.DisplayFor(model => model.Name)</h2>
+
+<div>
+    <div class="grid-container2">
+        <div id="image">
+            <img class="img-responsive" src="~/ProductImages/@Model.ImageFileName" width="400" height="400" />
+        </div>
+        <div id="details">
+            <d1 class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dt>
+                <dd>
+                    @Html.DisplayNameFor(model => model.Description)
+                </dd>
+                
+                <dt>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dt>
+                <dd>
+                    @Html.DisplayNameFor(model => model.Price)
+                </dd>
+                
+                <dt>
+                </dt>
+                <dd>
+                    <a class="btn btn-default" asp-controller="Basket" asp-action="Add" asp-route-id="model.Id">Add to Basket</a>
+                </dd>
+                
+                <dt>
+                </dt>
+                <dd>
+                    @Html.ActionLink("Back to Products", "Index")
+                </dd>
+            </d1>
+        </div>
+    </div>
+</div>

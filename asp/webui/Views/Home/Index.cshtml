@@ -1,0 +1,43 @@
+﻿@model Shop.WebUI.Models.ProductListModel
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<h1>Tyne Brew Coffee</h1>
+
+<div class="col-md-12">
+    <h4>Filter by Category</h4>
+
+    <div class="btnContainer">
+        @Html.ActionLink("All", "Index", new { string.Empty }, new { @class = "btn" })
+        @foreach(var cat in Model.Categories) {
+            @Html.ActionLink(cat.Category, "Index", new { category = cat.Id.ToString() }, new {@class = "btn"})
+        }
+    </div>
+</div>
+
+<div class="col-md-12">
+    <div class="grid-container3">
+        @foreach(var item in Model.Products) {
+            <div class="items" style="height:450px;padding:10px;margin=0">
+                <div class="col-md-6">
+                    <img class="img" style="height:250px" src="~/ProductImages/@item.ImageFileName" />
+                </div>
+                <div class="col-md-6">
+                    <strong>@Html.ActionLink(item.Name, "Details", new { id=item.Id })</strong>
+                </div>
+                <div class="col-md-6">
+                    <p>@item.Description</p>
+                </div>
+                <div class="col-md-6">
+                    <p>£@item.Price</p>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-default" asp-controller="Basket" asp-action="Add" asp-route-id="@item.Id">Add to Basket</a>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

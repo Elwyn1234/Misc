@@ -1,0 +1,45 @@
+@model Shop.WebUI.Models.BasketModel
+
+@{
+    ViewData["Title"] = "Basket";
+}
+
+<h1>Basket</h1>
+
+@if(Model.BasketItems.Count > 0) {
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>Product</th>
+            <th>Quantity</th>
+            <th></th>
+            <th>Price</th>
+            <th>Total</th>
+        </tr>
+        @foreach(var item in Model.BasketItems) {
+            <tr>
+                <td><img src="~/ProductImages/@item.ImageFileName" width="50" height="50" /></td>
+                <td>@item.Name</td>
+                <td>@item.Quantity</td>
+                <td>
+                    <a class="btn" asp-action="Add" asp-route-id="@item.ProductId">+</a>
+                    <a class="btn" asp-action="Remove" asp-route-id="@item.ProductId">+</a>
+                    <a class="btn" asp-action="Clear" asp-route-id="@item.ProductId">Clear</a>
+                </td>
+            </tr>
+            <td>@item.Price.ToString("C2")</td>
+            <td>@Model.BasketItems.Where(x => x.ProductId == item.ProductId).Sum(x => x.Quantity * x.Price).ToString("C2")</td>
+        }
+        <tr>
+            <td class="text-right" colspan="4">Grand Total: @Model.GrandTotal.ToString()</td>
+        </tr>
+        <tr>
+            <td class="text-right" colspan="4">
+                <a class="btn" asp-action="Clear">Clear Basket</a>
+                <a class="btn" asp-action="#">Checkout</a>
+            </td>
+        </tr>
+    </table>
+} else {
+    <h3 class="display-4 text-center">Your basket is empty.</h3>
+}
