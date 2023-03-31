@@ -1,0 +1,81 @@
+{
+  "users": [
+    {
+      "username": "user1",
+      "password": "user1",
+      "ownedModelCars": [
+        {
+          "modelCarName": "Bburago KTM 250 Duke",
+          "dateCollected": "11-01-2021"
+        },
+        {
+          "modelCarName": "Maisto KTM RC16",
+          "dateCollected": "22-02-2022"
+        }
+      ],
+      "wishedModelCars": [
+        {
+          "modelCarName": "MCG Lotus 72D",
+          "wishFactor": 4
+        }
+      ]
+    },
+    {
+      "username": "user2",
+      "password": "user2",
+      "ownedCars": [
+        {
+          "modelCarName": "Bburago KTM 250 Duke",
+          "dateCollected": "22-02-2022"
+        }
+      ],
+      "wishedCars": [
+        {
+          "modelCarName": "MCG Ford Capri Turbo Gr.5",
+          "wishFactor": 3
+        },
+        {
+          "modelCarName": "SpecialC.-114 Eicher Wotan II",
+          "wishFactor": 5
+        }
+      ]
+    }
+  ],
+  "modelCars": [
+    {
+      "name": "Bburago KTM 250 Duke",
+      "description": "This KTM 250 Duke diecast model motorcycle is orange/black and features working wheels. It is made by Bburago and is 1:18 scale (approx. 12cm / 4.7in long).\n\nThe KTM Duke 250 is a great all round morotcyle - making it incredibly popular with motorcycle enthusiasts. This model is a faithful replica - perfect for any model bike collection.",
+      "category": "Motorcycles",
+      "price": 795,
+      "imageFilePath": "assets/"
+    },
+    {
+      "name": "Maisto KTM RC16",
+      "description": "Donec non metus eu tortor gravida egestas. Etiam rutrum ac leo eu tristique. Fusce massa lorem, feugiat et nulla faucibus, faucibus eleifend nibh.",
+      "category": "Motorcycles",
+      "price": 895,
+      "imageFilePath": "assets/"
+    },
+    {
+      "name": "MCG Lotus 72D",
+      "description": "In id blandit purus, porta pellentesque nisi. Nullam pharetra massa eros, a tempor est maximus eu. Sed a sapien sit.",
+      "category": "Racing Cars",
+      "price": 1500,
+      "imageFilePath": "assets/"
+    },
+    {
+      "name": "MCG Ford Capri Turbo Gr.5",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris mollis orci non nulla sodales dictum in non est. Curabitur blandit venenatis suscipit. Aliquam ultricies neque eu arcu sodales tempor. Integer tincidunt ex sit amet dictum vestibulum. Duis elit justo.",
+      "category": "Racing Cars",
+      "price": 900,
+      "imageFilePath": "assets/"
+    },
+    {
+      "name": "SpecialC.-114 Eicher Wotan II",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer ac purus vel massa vestibulum faucibus hendrerit at velit. Pellentesque condimentum, purus ut blandit vehicula, lacus nulla laoreet neque, eget pharetra elit erat ut arcu. Nam nec arcu lacus.",
+      "category": "Tractors",
+      "price": 1099,
+      "imageFilePath": "assets/"
+    }
+  ]
+}
