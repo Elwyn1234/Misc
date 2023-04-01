@@ -1,0 +1,23 @@
+#searchBar {
+	
+}
+
+#productList {
+	/* Remove default list styling */
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+
+
+#productList li {
+	border-color: #ddd; /* Add a border to all links */
+	border-style: solid;
+	border-width: 10px 10px 0px 10px;
+	background-color: #f6f6f6; /* Grey background color */
+	padding: 12px; /* Add some padding */
+	text-decoration: none; /* Remove default text underline */
+	font-size: 18px; /* Increase the font-size */
+	color: black; /* Add a black text color */
+	display: block; /* Make it into a block element to fill the whole list */
+}

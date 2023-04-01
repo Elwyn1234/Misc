@@ -1,0 +1,28 @@
+#equipmentList {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: auto;
+}
+
+#equipmentList div {
+  width: 1000px;
+}
+
+.row {
+  width: 1000px;
+  display: flex;
+  flex-direction: row;
+}
+
+p {
+  width: 100px;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
+
+img {
+  width: 100px;
+  flex-shrink: 1;
+  flex-grow: 1;
+}
